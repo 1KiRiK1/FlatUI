@@ -1,0 +1,21 @@
+local colors = { "Custom", "Factorio_orange", "White", "Grey", "Red", "Orange_red", "Orange", "Yellow_orange", "Yellow", "Yellow_green", "Green", "Green_cyan", "Cyan", "Blue_cyan", "Blue", "Blue_violet", "Violet" }
+data:extend({
+    { type = "string-setting", name = "FUI_UI_style",              setting_type = "startup", default_value = "flat",                                 allowed_values = { "default", "flat", "transparent" },          order = "11" },
+    { type = "color-setting",  name = "FUI_main_color",            setting_type = "startup", default_value = { r = 10, g = 10, b = 10, a = 150 },    order = "12" },
+    { type = "string-setting", name = "FUI_set_add_color",         setting_type = "startup", default_value = "Factorio_orange",                      allowed_values = colors,                                        order = "13" },
+    { type = "color-setting",  name = "FUI_additional_color",      setting_type = "startup", default_value = { r = 126, g = 194, b = 38, a = 255 },  order = "14" },
+    { type = "bool-setting",   name = "FUI_invert_color",          setting_type = "startup", default_value = false,                                  order = "15" },
+    { type = "string-setting", name = "FUI_inventory_width",       setting_type = "startup", default_value = "default",                              allowed_values = { "default", "big", "biggest" },               order = "21" },
+    { type = "string-setting", name = "FUI_recipe_width",          setting_type = "startup", default_value = "default",                              allowed_values = { "default", "big", "biggest" },               order = "22" },
+    { type = "string-setting", name = "FUI_group_button_width",    setting_type = "startup", default_value = "default",                              allowed_values = { "default", "small", "smaller", "smallest" }, order = "23" },
+    { type = "bool-setting",   name = "FUI_health_bar",            setting_type = "startup", default_value = true,                                   order = "31" },
+    { type = "bool-setting",   name = "FUI_cursor_boxes",          setting_type = "startup", default_value = true,                                   order = "32" },
+    { type = "bool-setting",   name = "FUI_indication",            setting_type = "startup", default_value = true,                                   order = "331" },
+    { type = "color-setting",  name = "FUI_indication_arrow_tint", setting_type = "startup", default_value = { r = 107, g = 228, b = 107, a = 255 }, order = "332" },
+    { type = "color-setting",  name = "FUI_indication_line_tint",  setting_type = "startup", default_value = { r = 107, g = 228, b = 107, a = 255 }, order = "333" },
+    { type = "bool-setting",   name = "FUI_alert_arrow",           setting_type = "startup", default_value = true,                                   order = "341" },
+    { type = "double-setting", name = "FUI_alert_arrow_scale",     setting_type = "startup", default_value = 0.2,                                    minimum_value = 0, maximum_value = 1, order = "342" },
+    { type = "color-setting",  name = "FUI_alert_arrow_tint",      setting_type = "startup", default_value = { r = 255, g = 159, b = 28, a = 255 },  order = "343" },
+    { type = "bool-setting",   name = "FUI_underground_sprite",    setting_type = "startup", default_value = true,                                   order = "35" },
+    { type = "bool-setting",   name = "FUI_otherUI",               setting_type = "startup", default_value = true,                                   order = "36" },
+})

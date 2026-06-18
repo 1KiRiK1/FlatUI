@@ -1,0 +1,86 @@
+---------------------------------------------------------------------------------------------------
+Version: 1.1.5
+Date: 2026-01-29
+  Changes:
+    - Fixed pie_progress_color for Transparent interfaces because in some cases it was not visible.
+    - Fixed shift in electric_satisfaction_in_description_progressbar for Flat and Transparent interfaces.
+    - Fixed tab badge_graphical_set for Transparent interfaces.
+    - Changed new train_schedule_partially_fullfilled_condition_frame for Flat and Transparent interfaces.
+    - Changed train_schedule_temporary_station_frame temporary stops white again.
+    - Changed checkbox.checkmark for Transparent interfaces because in some cases it was not visible.
+    - Changed rail-placement-indicators add more brightness (requested by Metalface7).
+    - Аdded invert_colors for some icons.
+---------------------------------------------------------------------------------------------------
+Version: 1.1.4
+Date: 2026-01-27
+  Changes:
+    - Fixed table_with_selection for Transparent interfaces.
+    - Fixed slider.notch for Transparent interfaces.
+    - Fixed rounded_button for Transparent interfaces.
+    - Fixed double_slider for Transparent interfaces.
+    - Fixed tool_equip_ammo_slot for Transparent interfaces.
+    - Changed switch for Transparent interfaces because in some cases it was not visible.
+    - Changed fluid_indication_arrow and fluid_indication_arrow_both_ways for Flat and Transparent interfaces.
+    - Changed rail-placement-indicators for Flat and Transparent interfaces.
+    - Changed rail_planner_indication_arrow, rail_planner_indication_arrow_anchored, rail_planner_indication_arrow_too_far for Flat and Transparent interfaces.
+    - Аdded invert_colors for some icons.
+    - Added support for mods factoryplanner and informatron for Transparent interfaces.
+---------------------------------------------------------------------------------------------------
+Version: 1.1.3
+Date: 2025-10-29
+  Bugfixes:
+    - Fixed the size of "gui-new.png" and "gui-new_tr.png" for compatibility with update 2.0.68
+---------------------------------------------------------------------------------------------------
+Version: 1.1.2
+Date: 2025-04-07
+  Changes:
+    - Changed compact_red_slot for Flat and Transparent interfaces.
+    - Inverted color for many icons. Thanks to mingus for help.
+    - Removed background_blur from list_box_item because it causes graphical artifacts if list_box_item has a scrollbar. Thanks mingus.
+    - Changed color for train_schedule_temporary_station_frame.
+    - Changed checkmark. Now additional color is applied to it, because in some cases it was not visible.
+    - Changed crafting_queue_slot and promised_crafting_queue_slot.
+    - Changed filter_group_button_tab_slightly_larger
+    - Changed horizontal scrollbar
+    - Changed forward_button and tips_and_tricks_notification_button
+    - Changed radiobutton.selected_graphical_set because in some cases it was not visible.
+---------------------------------------------------------------------------------------------------
+Version: 1.1.1
+Date: 2025-03-20
+  Bugfixes:
+    - Fixed a bug when using transparent interface.
+---------------------------------------------------------------------------------------------------
+Version: 1.1.0
+Date: 2025-03-19
+  Changes:
+    - Added transparent interface option with choice of additional color (experimental).
+---------------------------------------------------------------------------------------------------
+Version: 1.0.4
+Date: 2025-03-11
+  Changes:
+    - Changed red_circuit_network_content_slot and green_circuit_network_content_slot.
+    - Changed red_slot color to match red_circuit_network_content_slot.
+    - Changed health_progressbar and its variations.
+    - Removed shadow from draggable_space and its variations.
+    - Changed shortcut_bar_expand_button.
+---------------------------------------------------------------------------------------------------
+Version: 1.0.3
+Date: 2025-01-28
+  Changes:
+    - Added more options to choose changes to the interface.
+    - Added color selection for "indication arrow", "indication line" and "alert arrow".
+---------------------------------------------------------------------------------------------------
+Version: 1.0.2
+Date: 2025-01-28
+  Changes:
+    - Added option to change the size of recipe group buttons. Thanks to Hoochie for the idea.
+---------------------------------------------------------------------------------------------------
+Version: 1.0.1
+Date: 2025-01-20
+  Changes:
+    - Returning "drag lines" to the interface. At the request of Harb42.
+---------------------------------------------------------------------------------------------------
+Version: 1.0.0
+Date: 2024-11-19
+  Info:
+    - Initial release.
