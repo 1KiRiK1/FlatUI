@@ -97,11 +97,11 @@ local light_accent = { hsv2rgb(h, s, v) }
 ---------------------------------------------------------------------
 if mods["flib"] then
     local SPRITE = {
-        SLOT_EMPTY = { position = { 0, 736 }, size = 80, border = 4 },
-        SLOT_BASE = { position = { 80, 736 }, size = 80, border = 4 },
-        SLOT_CLICKED = { position = { 160, 736 }, size = 80, border = 4 },
+        SLOT_EMPTY = { position = { 0, 0 }, size = 80, border = 4 },
+        SLOT_BASE = { position = { 80, 0 }, size = 80, border = 4 },
+        SLOT_CLICKED = { position = { 160, 0 }, size = 80, border = 4 },
         GLOW = {
-            position = { 240, 736 },
+            position = { 240, 0 },
             corner_size = 16,
             top_outer_border_shift = 4,
             bottom_outer_border_shift = -4,
@@ -110,14 +110,17 @@ if mods["flib"] then
             draw_type = "outer"
         }
     }
+    local FLIB_BUTTON_FILE = "__FlatUI__/graphics/flib_button.png"
     local function setup_flib_button(style_name, colors)
         local style = data.raw["gui-style"].default[style_name]
         if not style then return end
         local base_color, hover_color, disabled_color = colors[1], colors[2], colors[3]
-        style.default_graphical_set = { base = { border = 4, position = SPRITE.SLOT_BASE.position, size = SPRITE.SLOT_BASE.size, tint = base_color } }
+        style.default_graphical_set = { base = { border = 4, filename = FLIB_BUTTON_FILE, position = SPRITE.SLOT_BASE.position, size = SPRITE.SLOT_BASE.size, tint = base_color } }
         style.hovered_graphical_set = {
-            base = { border = 4, position = SPRITE.SLOT_BASE.position, size = SPRITE.SLOT_BASE.size, tint = hover_color },
+            base = { border = 4, filename = FLIB_BUTTON_FILE, position = SPRITE.SLOT_BASE.position, size = SPRITE.SLOT_BASE.size, tint = hover_color },
             glow = {
+                type = "composition",
+                filename = FLIB_BUTTON_FILE,
                 position = SPRITE.GLOW.position,
                 corner_size = SPRITE.GLOW.corner_size,
                 tint = hover_color,
@@ -128,11 +131,13 @@ if mods["flib"] then
                 draw_type = SPRITE.GLOW.draw_type
             }
         }
-        style.clicked_graphical_set = { base = { border = 4, position = SPRITE.SLOT_CLICKED.position, size = SPRITE.SLOT_CLICKED.size, tint = hover_color } }
-        style.selected_graphical_set = { base = { border = 4, position = SPRITE.SLOT_BASE.position, size = SPRITE.SLOT_BASE.size, tint = hover_color } }
+        style.clicked_graphical_set = { base = { border = 4, filename = FLIB_BUTTON_FILE, position = SPRITE.SLOT_CLICKED.position, size = SPRITE.SLOT_CLICKED.size, tint = hover_color } }
+        style.selected_graphical_set = { base = { border = 4, filename = FLIB_BUTTON_FILE, position = SPRITE.SLOT_BASE.position, size = SPRITE.SLOT_BASE.size, tint = hover_color } }
         style.selected_hovered_graphical_set = {
-            base = { border = 4, position = SPRITE.SLOT_BASE.position, size = SPRITE.SLOT_BASE.size, tint = hover_color },
+            base = { border = 4, filename = FLIB_BUTTON_FILE, position = SPRITE.SLOT_BASE.position, size = SPRITE.SLOT_BASE.size, tint = hover_color },
             glow = {
+                type = "composition",
+                filename = FLIB_BUTTON_FILE,
                 position = SPRITE.GLOW.position,
                 corner_size = SPRITE.GLOW.corner_size,
                 tint = hover_color,
@@ -143,8 +148,8 @@ if mods["flib"] then
                 draw_type = SPRITE.GLOW.draw_type
             }
         }
-        style.selected_clicked_graphical_set = { base = { border = 4, position = SPRITE.SLOT_CLICKED.position, size = SPRITE.SLOT_CLICKED.size, tint = hover_color } }
-        style.disabled_graphical_set = { base = { border = 4, position = SPRITE.SLOT_BASE.position, size = SPRITE.SLOT_BASE.size, tint = disabled_color } }
+        style.selected_clicked_graphical_set = { base = { border = 4, filename = FLIB_BUTTON_FILE, position = SPRITE.SLOT_CLICKED.position, size = SPRITE.SLOT_CLICKED.size, tint = hover_color } }
+        style.disabled_graphical_set = { base = { border = 4, filename = FLIB_BUTTON_FILE, position = SPRITE.SLOT_BASE.position, size = SPRITE.SLOT_BASE.size, tint = disabled_color } }
     end
     local BUTTONS = {
         default = { nil, accent_color, { 50, 50, 50 } },
@@ -162,7 +167,7 @@ if mods["flib"] then
     for name, colors in pairs(BUTTONS) do
         setup_flib_button("flib_slot_button_" .. name, colors)
     end
-    data.raw["gui-style"].default.flib_slot_button_default.default_graphical_set = { base = { border = 4, position = SPRITE.SLOT_EMPTY.position, size = SPRITE.SLOT_EMPTY.size } }
+    data.raw["gui-style"].default.flib_slot_button_default.default_graphical_set = { base = { border = 4, filename = FLIB_BUTTON_FILE, position = SPRITE.SLOT_EMPTY.position, size = SPRITE.SLOT_EMPTY.size } }
     if mods["cybersyn"] then
         local CYBERSYN_BUTTONS = {
             ltnm_small_slot_button_default = { position = SPRITE.SLOT_EMPTY.position, tint = nil },
@@ -174,7 +179,7 @@ if mods["flib"] then
         for name, config in pairs(CYBERSYN_BUTTONS) do
             local style = data.raw["gui-style"].default[name]
             if style then
-                style.disabled_graphical_set = { base = { border = 4, position = config.position, size = 80, tint = config.tint } }
+                style.disabled_graphical_set = { base = { border = 4, filename = FLIB_BUTTON_FILE, position = config.position, size = 80, tint = config.tint } }
             end
         end
     end
@@ -189,9 +194,7 @@ if mods["factoryplanner"] then
         selected_hovered_graphical_set = nil,
         selected_clicked_graphical_set = nil,
     })
-    safe_modify("fp_table_production", {
-        odd_row_graphical_set = { position = { 8, 642 }, size = 1, tint = main_color }
-    })
+    safe_modify("fp_table_production", { odd_row_graphical_set = { position = { 8, 642 }, size = 1, tint = main_color } })
     if settings.startup["FUI_invert_color"].value then
         local sprites_to_invert = {
             "fp_archive",

@@ -17,5 +17,10 @@ data:extend({
     { type = "double-setting", name = "FUI_alert_arrow_scale",     setting_type = "startup", default_value = 0.2,                                    minimum_value = 0, maximum_value = 1, order = "342" },
     { type = "color-setting",  name = "FUI_alert_arrow_tint",      setting_type = "startup", default_value = { r = 255, g = 159, b = 28, a = 255 },  order = "343" },
     { type = "bool-setting",   name = "FUI_underground_sprite",    setting_type = "startup", default_value = true,                                   order = "35" },
-    { type = "bool-setting",   name = "FUI_otherUI",               setting_type = "startup", default_value = true,                                   order = "36" },
+    { type = "bool-setting",   name = "FUI_ubelt_max_distance",    setting_type = "startup", default_value = true,                                   order = "41" },
+    { type = "bool-setting",   name = "FUI_pipe_max_distance",     setting_type = "startup", default_value = true,                                   order = "42" },
+    { type = "bool-setting",   name = "FUI_lmine_radius",          setting_type = "startup", default_value = true,                                   order = "43" },
+    { type = "bool-setting",   name = "FUI_lamp_light_radius",     setting_type = "startup", default_value = true,                                   order = "44" },
+    { type = "bool-setting",   name = "FUI_radar_radius",          setting_type = "startup", default_value = true,                                   order = "45" },
+    { type = "bool-setting",   name = "FUI_otherUI",               setting_type = "startup", default_value = true,                                   order = "91" },
 })

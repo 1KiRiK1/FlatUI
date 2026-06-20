@@ -1,6 +1,17 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.1.8
+Date: 2026-06-20
+  Features:
+    - Added radius visualizations for underground belts, pipe-to-ground, land mines, lamps and radars.
+    - Added individual settings to enable/disable each radius visualization.
+    - Added full localization support for 12 languages (en, es-ES, fr, de, it, ja, ko, pl, pt-BR, ru, uk, zh-CN).
+  Bugfixes:
+    - Fixed flib buttons for all interfaces.
+    - Fixed character GUI right side (recipes tab) when "Flat Character GUI" is disabled.
+    - Changed frame_tabbed_pane structure for Transparent interfaces.
+---------------------------------------------------------------------------------------------------
 Version: 1.1.7
-Date: 2026-02-19
+Date: 2026-06-19
   Changes:
     - Complete code refactoring.
     - Cleaned up commented-out code and unused variables.

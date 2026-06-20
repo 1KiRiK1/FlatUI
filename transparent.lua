@@ -242,6 +242,105 @@ if settings.startup["FUI_UI_style"].value == "transparent" then
         }
     }
 
+    gui_style.frame_tabbed_pane.tab_content_frame.graphical_set = {
+        base = {
+            right = { position = { 9, 642 }, size = { 8, 1 } },
+            right_bottom = { position = { 9, 643 }, size = { 8, 8 } },
+            bottom = { position = { 8, 643 }, size = { 1, 8 } },
+            center = { position = { 8, 642 }, size = { 1, 1 } },
+            tint = main_color,
+            background_blur = true
+        },
+        glow = {
+            right = { position = { 26, 642 }, size = { 8, 1 } },
+            right_bottom = { position = { 26, 643 }, size = { 8, 8 } },
+            bottom = { position = { 25, 643 }, size = { 1, 8 } },
+            center = { position = { 25, 642 }, size = { 1, 1 } },
+            tint = accent_color,
+            draw_type = "inner"
+        },
+        shadow = {
+            right = { position = { 34 + 9, 634 + 8 }, size = { 8, 1 } },
+            right_bottom = { position = { 34 + 9, 634 + 9 }, size = { 8, 8 } },
+            bottom = { position = { 34 + 9, 634 + 9 }, size = { 1, 8 } },
+            center = { position = { 34 + 8, 634 + 8 }, size = { 1, 1 } },
+            tint = shadow_tint,
+            draw_type = "outer"
+        }
+    }
+    gui_style.frame_tabbed_pane_corner.graphical_set = {
+        base = {
+            top = { position = { 8, 634 }, size = { 1, 8 } },
+            center = { position = { 8, 642 }, size = { 1, 1 } },
+            tint = main_color,
+            background_blur = true
+        },
+        glow = {
+            top = { position = { 25, 634 }, size = { 1, 8 } },
+            center = { position = { 25, 642 }, size = { 1, 1 } },
+            tint = accent_color,
+            draw_type = "inner"
+        },
+        shadow = {
+            top = { position = { 34 + 8, 634 }, size = { 1, 8 } },
+            center = { position = { 34 + 8, 634 + 8 }, size = { 1, 1 } },
+            tint = shadow_tint,
+            draw_type = "outer"
+        }
+    }
+    gui_style.frame_tabbed_pane_frame_header.graphical_set = {
+        base = {
+            right_top = { position = { 9, 634 }, size = { 8, 8 } },
+            right = { position = { 9, 642 }, size = { 8, 1 } },
+            top = { position = { 8, 634 }, size = { 1, 8 } },
+            center = { position = { 8, 642 }, size = { 1, 1 } },
+            tint = main_color,
+            background_blur = true
+        },
+        glow = {
+            right_top = { position = { 26, 634 }, size = { 8, 8 } },
+            right = { position = { 26, 642 }, size = { 8, 1 } },
+            top = { position = { 25, 634 }, size = { 1, 8 } },
+            center = { position = { 25, 642 }, size = { 1, 1 } },
+            tint = accent_color,
+            draw_type = "inner"
+        },
+        shadow = {
+            top = { position = { 34 + 8, 634 }, size = { 1, 8 } },
+            right_top = { position = { 34 + 9, 634 }, size = { 8, 8 } },
+            right = { position = { 34 + 9, 634 + 8 }, size = { 8, 1 } },
+            center = { position = { 34 + 8, 634 + 8 }, size = { 1, 1 } },
+            tint = shadow_tint,
+            draw_type = "outer"
+        }
+    }
+    gui_style.frame_tab.default_graphical_set = {
+        base = { border = 4, position = { 80, 736 }, size = 80, tint = main_color, background_blur = true },
+        glow = {
+            position = { 240, 736 },
+            corner_size = 16,
+            tint = accent_color,
+            top_outer_border_shift = 4,
+            bottom_outer_border_shift = -4,
+            left_outer_border_shift = 4,
+            right_outer_border_shift = -4,
+            draw_type = "outer"
+        }
+    }
+    gui_style.frame_tab.selected_graphical_set = {
+        base = { border = 4, position = { 80, 736 }, size = 80, tint = light_accent },
+        glow = {
+            position = { 240, 736 },
+            corner_size = 16,
+            tint = accent_color,
+            top_outer_border_shift = 4,
+            bottom_outer_border_shift = -4,
+            left_outer_border_shift = 4,
+            right_outer_border_shift = -4,
+            draw_type = "outer"
+        }
+    }
+
     gui_style.inside_shallow_frame.graphical_set = { base = { position = { 17, 0 }, corner_size = 8, draw_type = "outer", tint = accent_color } }
     gui_style.subheader_frame.graphical_set = { base = { corner_size = 8, position = { 0, 634 }, tint = main_color, background_blur = true } }
     gui_style.repeated_subheader_frame.graphical_set = { base = { corner_size = 8, position = { 0, 634 }, tint = main_color, background_blur = true } }
