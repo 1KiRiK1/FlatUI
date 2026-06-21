@@ -84,7 +84,7 @@ local COLOR_PRESETS = {
 }
 local accent_color
 if settings.startup["FUI_set_add_color"].value == "Custom" then
-    accent_color = settings.startup["FUI_additionlight_accent"].value
+    accent_color = settings.startup["FUI_additional_color"].value
 else
     accent_color = COLOR_PRESETS[settings.startup["FUI_set_add_color"].value] or COLOR_PRESETS.Factorio_orange
 end
